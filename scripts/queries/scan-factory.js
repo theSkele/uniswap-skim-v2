@@ -43,7 +43,7 @@ const setRPCandFactory = async (net, add) => {
       timeout = rpcTimeout.remote;
     } else if (net === 'matic') {
       rpc = env.parsed.MATIC_RPC;
-      timeout = rpcTimeout.remote;
+      timeout = rpcTimeout.local;
     } else if (net === 'ftm') {
       rpc = env.parsed.FANTOM_PRC;
       timeout = rpcTimeout.remote;
@@ -241,7 +241,7 @@ const handleInput = async () => {
         initial = factoryPair.count;
         pairPath = path.resolve(
           '../uniswap-skim-v2/data/pairs/',
-          `{factoryPair.network}`,
+          `${factoryPair.network}`,
           `${factoryPair.name}.js`
         );
 
@@ -270,3 +270,27 @@ const handleInput = async () => {
 };
 
 handleInput();
+
+const cleanUp = async () => {
+  pairPath = path.resolve(
+          '../uniswap-skim-v2/data/pairs/',
+          `${factoryPair.network}`,
+          `${factoryPair.name}.js`
+        );
+  fs.readFile(pairPath, 'utf-8', function(err, data) {
+    if (err) throw err;
+ 
+    var removeAllBrackets = data.replace(/];/gim, '');
+ 
+    fs.writeFileSync(pairPath, removeAllBrackets, 'utf-8', function(err, data) {
+        if (err) throw err;
+    })
+    fs.writeFileSync(pairPath, '];',  {'flag':'a'},  function(err) {
+      if (err) {
+          return console.error(err);
+      }
+    });
+  });
+};
+
+cleanUp();
