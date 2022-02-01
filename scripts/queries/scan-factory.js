@@ -285,10 +285,8 @@ const cleanUp = async () => {
     fs.writeFileSync(pairPath, removeAllBrackets, 'utf-8', function(err, data) {
         if (err) throw err;
     })
-    fs.writeFileSync(pairPath, '];',  {'flag':'a'},  function(err) {
-      if (err) {
-          return console.error(err);
-      }
+    fs.writeFileSync(pairPath, '\r\n];',  {'flag':'a'},  function(err) {
+      if (err) throw err;
     });
   });
 };

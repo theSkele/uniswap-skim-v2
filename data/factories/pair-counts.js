@@ -1024,7 +1024,7 @@ module.exports = [
   {
     name: 'honey-matic',
     network: 'matic',
-    count: 178,
+    count: 212,
     abi: 'standard',
     address: '0x03DAa61d8007443a6584e3d8f85105096543C19c'
   },
