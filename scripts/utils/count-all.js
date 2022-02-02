@@ -34,7 +34,7 @@ const sumNumbers = () => {
   networks.forEach((n) => {
     count += Number(n.pairs);
   });
-
+  
   return count;
 };
 

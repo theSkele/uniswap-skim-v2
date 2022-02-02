@@ -6059,7 +6059,7 @@ module.exports = [
       name: 'EVE'
     }
   },
-];
+
 
   {
     index: 501,
@@ -6491,5 +6491,20 @@ module.exports = [
     token1: {
       id: '0xCd9c7397B0ef2E9b2a9440d61B0e1E3351a38A28',
       name: 'Litetokens'
+    }
+  },
+];
+];
+
+  {
+    index: 750,
+    id: '0xFdC85cCbCb7f844327b435A96032d36D8d2ff038',
+    token0: {
+      id: '0x5d47bAbA0d66083C52009271faF3F50DCc01023C',
+      name: 'ApeSwapFinance Banana'
+    },
+    token1: {
+      id: '0x8623e66Bea0DCe41B6d47f9C44e806A115baBae0',
+      name: 'NFTY Token'
     }
   },

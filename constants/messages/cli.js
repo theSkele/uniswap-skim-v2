@@ -12,24 +12,7 @@ module.exports = [
       cc, litchi, luaV2, archi, suni, swapdex, coachhub, ddexV2, coachhubV2
 
       MATIC:
-      quick, sushi-matic, cometh, wault-matic, firebird, dfyn, ape-matic, steak, poly-matic, gravis-matic, honey-matic,
-      zero, smartdex, jet, swapnet, cryption, you-bsc
-
-      FANTOM:
-      sushi-fantom, spirit, spooky, hyper, waka, fin, paint, aura, shib-ftm, zoo
-
-      XDAI:
-      sushi-xdai, honey, swapr-xdai, leven, bao
-
-      BSC:
-      sushi-bsc, cake, cake-v1, bakery, ape, thug, jul, cafe, cheese, slime, pure, dank, borg, panda, coin, mock, demax,
-      demax-v1, bscswap, vault, bi, warden, gravis-bsc, mdex-bsc, softdrink, pact, panther, sato, venom
-
-      HECO:
-      mdex, butter, dogeswap, lava, bxh, pipi, galaxy-heco, you-heco
-
-      ARBI:
-      sushi-arbi
+      quick, sushi-matic, wault-matic, dfyn, ape-matic, jet
 
       modes:
       arg4: all, lp, imb, skim, sync, emoji, mismatch
